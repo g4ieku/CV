@@ -2,7 +2,7 @@
 
 Personal CV website built with plain HTML & CSS.
 
-**Live:** https://g4ieku.github.io/cv/
+**Live:** https://g4ieku.github.io/CV/
 
 ## Features
 
