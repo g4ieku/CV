@@ -132,6 +132,10 @@ ol {
   font-weight: 700;
   color: var(--side-text);
 }
+.edu .spec {
+  display: block;
+  color: var(--side-text);
+}
 
 .dots li {
   position: relative;
@@ -294,6 +298,40 @@ ol {
   font-size: 12px;
   font-style: italic;
   color: var(--muted);
+}
+
+.pill {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 9px;
+  border: 1px solid var(--rule);
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: 2px;
+  color: var(--muted);
+}
+
+.title-row h3 {
+  margin-top: 6px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.tags li {
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--white);
+  background: var(--navy);
+}
+
+.main-section {
+  margin-top: 8px;
 }
 
 .stack {
