@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grzegorz Czekaj – CV – Power Platform Developer</title>
+<style>
+  /* Static TrueType files (not variable fonts) so Chrome embeds real fonts in the PDF. */
+  @font-face { font-family: 'Inter'; font-weight: 400; src: url('fonts/Inter-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Inter'; font-weight: 500; src: url('fonts/Inter-500.ttf') format('truetype'); }
+  @font-face { font-family: 'Inter'; font-weight: 600; src: url('fonts/Inter-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Inter'; font-weight: 700; src: url('fonts/Inter-700.ttf') format('truetype'); }
+  @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 300; src: url('fonts/PlusJakartaSans-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; src: url('fonts/PlusJakartaSans-700.ttf') format('truetype'); }
+  @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 800; src: url('fonts/PlusJakartaSans-800.ttf') format('truetype'); }
+
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --ink: #0F1D35;
+    --ink-2: #172B4D;
+    --accent: #3B82F6;
+    --accent-strong: #2563EB;
+    --accent-2: #8B5CF6;
+    --accent-soft: #EFF5FF;
+    --text: #1E293B;
+    --body: #3A4558;
+    --muted: #64748B;
+    --line: #E3E8F0;
+    --side-text: #D9E2F1;
+    --side-muted: #8FA1BF;
+    --side-line: rgba(255, 255, 255, .14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 8.3pt;
+    line-height: 1.42;
+    color: var(--body);
+    background: #fff;
+  }
+  a { color: inherit; text-decoration: none; }
+  .ico { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---------- page frame: every column is exactly one A4 page tall ---------- */
+  .page {
+    width: 210mm; height: 297mm;
+    display: grid; grid-template-columns: 68mm 1fr; grid-template-rows: 100%;
+    position: relative; overflow: hidden;
+    break-after: page;
+  }
+  .page:last-of-type { break-after: auto; }
+  .page::before {
+    content: ""; position: absolute; top: 0; left: 68mm; right: 0; height: 1.5mm;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  }
+  .side {
+    grid-column: 1; grid-row: 1; min-height: 0;
+    display: flex; flex-direction: column;
+    padding: 13mm 7mm 11mm 8mm;
+    color: var(--side-text);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(59, 130, 246, .28), transparent 60mm),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  }
+  .main {
+    grid-column: 2; grid-row: 1; min-height: 0;
+    display: flex; flex-direction: column;
+    padding: 13mm 11mm 10mm 10mm;
+  }
+  .push { margin-top: auto; }
+
+  /* ---------- sidebar ---------- */
+  .photo {
+    width: 37mm; height: 37mm; margin: 0 auto 7mm;
+    border-radius: 50%; padding: 1mm;
+    background: linear-gradient(140deg, var(--accent), var(--accent-2));
+  }
+  .photo img {
+    width: 100%; height: 100%; display: block;
+    border-radius: 50%; object-fit: cover;
+    border: 1mm solid var(--ink);
+  }
+  .sblock { margin-bottom: 5.4mm; }
+  .sblock:last-child { margin-bottom: 0; }
+  .sblock h3 {
+    display: flex; align-items: center; gap: 2.5mm;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+    font-size: 9pt; letter-spacing: .08em; text-transform: uppercase;
+    color: #fff; margin-bottom: 3.2mm;
+  }
+  .sblock h3::after { content: ""; flex: 1; height: 1px; background: var(--side-line); }
+  .side h4 {
+    font-size: 6.8pt; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--side-muted); margin-bottom: 1.5mm;
+  }
+
+  .contact { list-style: none; }
+  .contact li {
+    display: flex; align-items: center; gap: 2.5mm;
+    margin-bottom: 1.9mm; font-size: 7.9pt;
+  }
+  .contact li:last-child { margin-bottom: 0; }
+  .contact .ic {
+    flex: none; width: 5.9mm; height: 5.9mm; border-radius: 1.6mm;
+    display: grid; place-items: center;
+    background: rgba(59, 130, 246, .18); border: 1px solid rgba(96, 165, 250, .3);
+    color: #93C5FD;
+  }
+  .contact .ic svg { width: 3.1mm; height: 3.1mm; }
+
+  .sk { margin-bottom: 3.1mm; }
+  .sk:last-child { margin-bottom: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.1mm; }
+  .chips span {
+    font-size: 7.1pt; line-height: 1.25; white-space: nowrap;
+    padding: .75mm 2mm; border-radius: 99px;
+    background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14);
+    color: #E5ECF7;
+  }
+  .chips span.hi {
+    background: rgba(59, 130, 246, .26); border-color: rgba(96, 165, 250, .6);
+    color: #fff; font-weight: 500;
+  }
+
+  .lang { margin-bottom: 2.6mm; }
+  .lang:last-child { margin-bottom: 0; }
+  .lang .row { display: flex; justify-content: space-between; align-items: baseline; font-size: 8pt; }
+  .lang .row b { color: #fff; font-weight: 600; }
+  .lang .row span { font-size: 7pt; color: var(--side-muted); }
+  .scale { display: grid; grid-template-columns: repeat(6, 1fr); gap: .9mm; margin-top: 1.2mm; }
+  .scale i { height: 1.4mm; border-radius: 1mm; background: rgba(255, 255, 255, .12); }
+  .scale i.on { background: linear-gradient(90deg, #3B82F6, #60A5FA); }
+  .cefr {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: .9mm; margin-top: .9mm;
+    font-size: 5.8pt; letter-spacing: .06em; text-align: center; color: var(--side-muted);
+  }
+
+  .cgroup { margin-bottom: 2.8mm; }
+  .cgroup:last-child { margin-bottom: 0; }
+  .cert { display: flex; gap: 2.2mm; align-items: flex-start; margin-bottom: 1.5mm; font-size: 7.8pt; line-height: 1.36; }
+  .cert:last-child { margin-bottom: 0; }
+  .cert svg { flex: none; width: 3.7mm; height: 3.7mm; margin-top: .1mm; color: #93C5FD; }
+
+  .sitem { margin-bottom: 1.9mm; font-size: 7.8pt; line-height: 1.36; }
+  .sitem:last-child { margin-bottom: 0; }
+  .sitem b { display: block; color: #fff; font-weight: 600; font-size: 8pt; }
+  .sitem span { display: block; color: var(--side-text); }
+  .sitem .meta { color: var(--side-muted); font-size: 7.3pt; }
+  .sitem .yr { color: #93C5FD; font-weight: 600; font-size: 7.3pt; letter-spacing: .02em; margin-bottom: .3mm; }
+
+  /* ---------- main column ---------- */
+  /* Text containers stay unpositioned so the PDF text layer follows DOM order (ATS-friendly). */
+  .hero-bar {
+    display: block; width: 16mm; height: 1.1mm; margin-top: 3.3mm; border-radius: 1mm;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  }
+  .hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+    font-size: 30pt; line-height: 1.02; letter-spacing: -.02em; color: var(--ink);
+  }
+  .hero h1 .ln { font-weight: 300; }
+  .hero .headline {
+    margin-top: 2.2mm;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+    font-size: 11pt; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent-strong);
+  }
+  .hero .focus { margin-top: 1.4mm; font-size: 8.2pt; color: var(--muted); }
+
+  .running {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 2.8mm; border-bottom: 1px solid var(--line);
+  }
+  .running .nm { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 12pt; color: var(--ink); }
+  .running .nm span { font-weight: 300; }
+  .running .rl {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+    font-size: 7.8pt; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-strong);
+  }
+
+  .sec { margin-top: 5mm; }
+  .sec > h2 {
+    display: flex; align-items: center; gap: 2.6mm; margin-bottom: 3.2mm;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+    font-size: 10.8pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink);
+  }
+  .sec > h2::after { content: ""; flex: 1; height: 1.2px; background: var(--line); }
+  .sec > h2 .badge-ic {
+    flex: none; width: 6.4mm; height: 6.4mm; border-radius: 1.8mm;
+    display: grid; place-items: center;
+    background: var(--ink); color: #fff;
+  }
+  .sec > h2 .badge-ic svg { width: 3.5mm; height: 3.5mm; }
+
+  .profile p { font-size: 8.6pt; line-height: 1.52; }
+  .profile p b { color: var(--text); font-weight: 600; }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3.6mm;
+    border: 1px solid #E1E9F5; border-radius: 2.6mm; overflow: hidden;
+    background: linear-gradient(180deg, #F7FAFF, #F0F5FE);
+  }
+  .stat { padding: 2.4mm 3mm 2.6mm; }
+  .stat + .stat { border-left: 1px solid #E1E9F5; }
+  .stat b {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+    font-size: 14.5pt; line-height: 1.05; color: var(--accent-strong);
+  }
+  .stat b small { font-size: 7pt; font-weight: 700; letter-spacing: .02em; }
+  .stat span { display: block; margin-top: .9mm; font-size: 6.8pt; line-height: 1.3; color: var(--muted); }
+
+  .org { margin-bottom: 4.4mm; }
+  .org:last-child { margin-bottom: 0; }
+  .org-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .org-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 10.4pt; color: var(--ink); }
+  .org-loc { font-size: 7.6pt; color: var(--muted); white-space: nowrap; }
+  .org-sub { margin-top: .3mm; font-size: 7.6pt; color: var(--muted); }
+  .org-sub b { color: var(--text); font-weight: 600; }
+
+  .roles { margin-top: 2.2mm; margin-left: 1.6mm; padding-left: 5mm; border-left: 1.3px solid #D5DEEB; }
+  .roles:first-child { margin-top: 0; }
+  .role { margin-bottom: 3.2mm; }
+  .role:last-child { margin-bottom: 0; }
+  .role::before {
+    /* timeline node: a float pulled into the gutter, centred on the 1.3px rail */
+    content: ""; float: left; box-sizing: border-box;
+    width: 2.9mm; height: 2.9mm; border-radius: 50%;
+    margin: 1.1mm 0 0 calc(-5mm - .65px - 1.45mm);
+    background: #fff; border: 1.3px solid var(--accent);
+  }
+  .role.now::before { background: var(--accent); box-shadow: 0 0 0 .9mm rgba(59, 130, 246, .2); }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .role-title { font-weight: 700; font-size: 9.1pt; color: var(--text); }
+  .pill {
+    display: inline-block; margin-left: .6mm; padding: .2mm 1.8mm; border-radius: 99px;
+    font-size: 6.8pt; font-weight: 600; vertical-align: 1px;
+    background: var(--accent-soft); color: #1E4FA8; border: 1px solid #DBE7FB;
+  }
+  .date {
+    font-size: 7.6pt; font-weight: 600; color: var(--accent-strong);
+    white-space: nowrap; font-variant-numeric: tabular-nums;
+  }
+  .role-note { margin-top: .1mm; font-size: 7.4pt; color: var(--muted); }
+  .role ul { list-style: none; margin-top: 1.1mm; }
+  .role li { padding-left: 3.4mm; margin-bottom: .45mm; }
+  .role li:last-child { margin-bottom: 0; }
+  .role li::before {
+    content: ""; float: left;
+    width: 1.1mm; height: 1.1mm; border-radius: 50%; background: #94A3B8;
+    margin: 1.75mm 0 0 -3mm;
+  }
+  .role li b { color: var(--text); font-weight: 600; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 1.3mm; margin-top: 1.3mm; }
+  .tag {
+    font-size: 7.1pt; padding: .55mm 2.1mm; border-radius: 1.4mm;
+    background: #F3F0FF; color: #5B3FC4; border: 1px solid #E4DCFF;
+  }
+  .tag b { font-weight: 700; }
+  .link { margin-top: 1.3mm; font-size: 7.6pt; font-weight: 600; color: var(--accent-strong); }
+
+  .qr { display: flex; align-items: center; gap: 3mm; }
+  .qr .code { flex: none; width: 14mm; height: 14mm; padding: 1mm; border-radius: 1.2mm; background: #fff; }
+  .qr .code svg { width: 100%; height: 100%; display: block; }
+  .qr .txt { font-size: 7.3pt; line-height: 1.38; color: var(--side-text); }
+  .qr .txt b { display: block; margin-bottom: .6mm; font-size: 8pt; color: #fff; }
+
+  .gdpr {
+    padding-top: 2.4mm; border-top: 1px solid var(--line);
+    font-size: 6.3pt; line-height: 1.42; color: #8B95A7;
+  }
+
+  /* keep wrapped lines from ending on a lonely word */
+  .main li, .profile p, .org-sub { text-wrap: pretty; }
+  .cert span, .sitem span { text-wrap: balance; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </defs>
+</svg>
+
+<!-- ======================= PAGE 1 ======================= -->
+<section class="page">
+  <main class="main">
+    <header class="hero">
+      <h1>Grzegorz <span class="ln">Czekaj</span></h1>
+      <div class="headline">Power Platform Developer</div>
+      <div class="focus">Power Apps · Power Automate · Dataverse · Dynamics 365 · Copilot Studio</div>
+      <span class="hero-bar"></span>
+    </header>
+
+    <section class="sec profile">
+      <h2><span class="badge-ic"><svg class="ico"><use href="#i-user"/></svg></span>Profile</h2>
+      <p>I am a dedicated, detail-oriented <b>Power Platform Developer</b> with 4+ years of experience delivering automation and business applications on <b>Microsoft Power Platform</b> and <b>Dynamics 365</b>. Having grown from finance operations into solution engineering at HEINEKEN, I understand the business processes I automate, not just the technology. I especially enjoy creative work and building completely new solutions, and I am now expanding into AI-powered automation with <b>Copilot Studio</b>.</p>
+      <div class="stats">
+        <div class="stat"><b>4+</b><span>years in automation &amp; Power Platform</span></div>
+        <div class="stat"><b>7+</b><span>years at HEINEKEN, across 6 roles</span></div>
+        <div class="stat"><b><small>up to </small>50%</b><span>less manual effort via Power Automate</span></div>
+        <div class="stat"><b>7</b><span>Microsoft certifications</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2><span class="badge-ic"><svg class="ico"><use href="#i-briefcase"/></svg></span>Experience</h2>
+
+      <div class="org">
+        <div class="org-head">
+          <div class="org-name">Inter Cars S.A.</div>
+          <div class="org-loc">Warsaw, Poland</div>
+        </div>
+        <div class="roles">
+          <div class="role now">
+            <div class="role-head">
+              <span class="role-title">Automation Solutions Power Platform Developer</span>
+              <span class="date">Aug 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Design and implement business solutions on Power Platform with <b>Power Automate</b> and <b>Power Apps</b> (Canvas and model-driven)</li>
+              <li>Develop and maintain RPA processes in <b>UiPath</b></li>
+              <li>Build supporting scripts and integrations in <b>Python</b></li>
+              <li>Create and maintain process and solution documentation in Polish and English</li>
+              <li>Standardize and modernize existing solutions, and help the business analyze and evaluate ideas for new automations</li>
+              <li>Actively contribute to the growth of the internal automation community</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head">
+          <div class="org-name">PIRXON</div>
+          <div class="org-loc">Gdańsk, Poland</div>
+        </div>
+        <div class="roles">
+          <div class="role now">
+            <div class="role-head">
+              <span class="role-title">Power Automate Desktop Developer <span class="pill">Part-time</span></span>
+              <span class="date">Mar 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Design, develop, and maintain RPA solutions in <b>Power Automate Desktop</b> and <b>Power Automate</b> cloud flows, automating repetitive business processes</li>
+              <li>Integrate flows with web and desktop apps, files, and databases, using variables, loops, UI automation, and error handling</li>
+              <li>Analyze processes with business and technical teams to identify automation opportunities and deliver RPA solutions</li>
+              <li>Support testing, deployment, monitoring, and maintenance of production automations, resolving issues to improve stability and performance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head">
+          <div class="org-name">HEINEKEN Global Shared Services</div>
+          <div class="org-loc">Kraków, Poland</div>
+        </div>
+        <div class="org-sub"><b>7 yrs 4 mos</b></div>
+        <div class="roles">
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Solution Engineer (Dynamics 365)</span>
+              <span class="date">Aug 2025 – Sep 2026</span>
+            </div>
+            <ul>
+              <li>Designed, configured, and delivered <b>Dynamics 365 Customer Engagement (CE)</b> solutions aligned with business and OpCo requirements</li>
+              <li>Customized <b>Dynamics 365 Customer Service</b> for case management: Dataverse tables, forms, views, and business rules</li>
+              <li>Built <b>model-driven apps</b> that streamlined customer service workflows</li>
+              <li>Automated case routing, escalations, SLAs, and approvals in <b>Power Automate</b></li>
+              <li>Integrated Dynamics 365 with SharePoint, enterprise systems, and APIs</li>
+              <li>Collaborated with Product Owners and DevOps on testing, deployment, troubleshooting, and knowledge transfer, following <b>ALM</b> best practices</li>
+              <li>Ensured platform stability in line with governance and security standards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="side">
+    <div class="photo"><img src="photo.jpg" alt="Grzegorz Czekaj"></div>
+
+    <div class="sblock">
+      <h3>Contact</h3>
+      <ul class="contact">
+        <li><span class="ic"><svg class="ico"><use href="#i-phone"/></svg></span><a href="tel:+48888129384">+48 888 129 384</a></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-mail"/></svg></span><a href="mailto:czekajgieku@gmail.com">czekajgieku@gmail.com</a></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-pin"/></svg></span><span>Kraków, Poland</span></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-linkedin"/></svg></span><a href="https://www.linkedin.com/in/grzegorzczekaj">linkedin.com/in/grzegorzczekaj</a></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-github"/></svg></span><a href="https://github.com/g4ieku">github.com/g4ieku</a></li>
+        <li><span class="ic"><svg class="ico"><use href="#i-file"/></svg></span><a href="https://g4ieku.github.io/CV/">g4ieku.github.io/CV</a></li>
+      </ul>
+    </div>
+
+    <div class="sblock">
+      <h3>Skills</h3>
+      <div class="sk">
+        <h4>Power Platform</h4>
+        <div class="chips"><span class="hi">Power Apps</span><span class="hi">Power Automate</span><span class="hi">Dataverse</span><span>Power BI</span><span class="hi">Copilot Studio</span></div>
+      </div>
+      <div class="sk">
+        <h4>Dynamics 365 &amp; Microsoft 365</h4>
+        <div class="chips"><span class="hi">D365 Customer Service</span><span>D365 Customer Engagement</span><span>SharePoint</span><span>Excel</span></div>
+      </div>
+      <div class="sk">
+        <h4>RPA &amp; scripting</h4>
+        <div class="chips"><span>Power Automate Desktop</span><span>UiPath</span><span>VBA</span><span>Python</span></div>
+      </div>
+      <div class="sk">
+        <h4>Development</h4>
+        <div class="chips"><span>C#</span><span>JavaScript (ES6)</span><span>HTML5</span><span>CSS3 (SCSS)</span><span>Bootstrap</span><span>PostgreSQL</span></div>
+      </div>
+      <div class="sk">
+        <h4>Tools</h4>
+        <div class="chips"><span>Git &amp; GitHub</span><span>Jira</span><span>CapCut</span></div>
+      </div>
+    </div>
+
+    <div class="sblock">
+      <h3>Languages</h3>
+      <div class="lang">
+        <div class="row"><b>Polish</b><span>Native</span></div>
+        <div class="scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      </div>
+      <div class="lang">
+        <div class="row"><b>English</b><span>B2 · Upper-intermediate</span></div>
+        <div class="scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+      </div>
+      <div class="lang">
+        <div class="row"><b>French</b><span>A2 · Elementary</span></div>
+        <div class="scale"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div class="cefr"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- ======================= PAGE 2 ======================= -->
+<section class="page">
+  <main class="main">
+    <div class="running">
+      <div class="nm">Grzegorz <span>Czekaj</span></div>
+      <div class="rl">Power Platform Developer</div>
+    </div>
+
+    <section class="sec">
+      <h2><span class="badge-ic"><svg class="ico"><use href="#i-briefcase"/></svg></span>Experience</h2>
+      <div class="org">
+        <div class="roles">
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Finance Automation Consultant</span>
+              <span class="date">Jan 2024 – Aug 2025</span>
+            </div>
+            <ul>
+              <li>Built and optimized <b>Power Automate</b> flows that cut manual effort by <b>up to 50%</b></li>
+              <li>Developed interactive <b>Power BI</b> reports and dashboards for decision-makers</li>
+              <li>Built <b>Canvas and model-driven Power Apps</b> to automate business processes</li>
+              <li>Integrated solutions with SharePoint, Dynamics 365, and external APIs</li>
+              <li>Implemented security roles and data-governance best practices in <b>Dataverse</b></li>
+              <li>Trained users and stakeholders and wrote documentation to drive adoption</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Junior Automation Specialist</span>
+              <span class="date">Feb 2022 – Jan 2024</span>
+            </div>
+            <ul>
+              <li>Identified automation and optimization opportunities in business processes</li>
+              <li>Built, implemented, and maintained automated solutions that improved efficiency and reduced manual effort</li>
+              <li>Designed and executed scripted <b>QA automation tests</b> to validate system operations and ensure reliability</li>
+              <li>Configured the databases, applications, and infrastructure automation relies on, and diagnosed and resolved issues to keep systems stable</li>
+              <li>Partnered with cross-functional teams to gather requirements and deliver solutions that improved productivity</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">VAMR Analyst (France)</span>
+              <span class="date">Apr 2021 – Feb 2022</span>
+            </div>
+            <div class="role-note">Promoted from Junior VAMR Analyst (France), Oct 2020 – Apr 2021</div>
+            <ul>
+              <li>Analyzed open items, including blocked items, debit balances, direct debits, and overdue accounts, to ensure financial accuracy</li>
+              <li>Delivered monthly control reports and detailed variance analysis</li>
+              <li>Proposed improvements to control effectiveness and escalated issues through the agreed governance routes</li>
+              <li>Supported internal audits and kept procedures and documentation current</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <span class="role-title">Junior PTP Administrator (France)</span>
+              <span class="date">Jun 2019 – Oct 2020</span>
+            </div>
+            <ul>
+              <li>Processed PO and non-PO invoices and performed daily accounts payable activities in line with financial controls</li>
+              <li>Troubleshot invoice-processing errors, handled vendor inquiries, and prepared ad-hoc reports and financial analyses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2><span class="badge-ic"><svg class="ico"><use href="#i-landmark"/></svg></span>Public Service</h2>
+      <div class="org">
+        <div class="org-head">
+          <div class="org-name">District Council XVII Wzgórza Krzesławickie</div>
+          <div class="org-loc">Kraków, Poland</div>
+        </div>
+        <div class="roles">
+          <div class="role now">
+            <div class="role-head">
+              <span class="role-title">District Councilor</span>
+              <span class="date">Jan 2021 – Present</span>
+            </div>
+            <div class="tags">
+              <span class="tag"><b>Vice-Chairman</b> · Rule of Law and Public Safety Committee</span>
+              <span class="tag"><b>Vice-Chairman</b> · Environmental Protection Committee</span>
+            </div>
+            <ul>
+              <li>Represent residents and bring their concerns to the relevant authorities</li>
+              <li>Resolve issues raised by constituents in a timely, structured manner</li>
+              <li>Vote on local resolutions, budget allocations, and development projects</li>
+              <li>Attend council sessions and public events, and give feedback on council resolutions to local government bodies and stakeholder groups</li>
+            </ul>
+            <div class="link"><a href="https://www.radnyczekaj.pl/">www.radnyczekaj.pl</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <p class="gdpr push">I hereby consent to the processing of my personal data included in this document for the purposes of the recruitment process, in accordance with the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</p>
+  </main>
+
+  <aside class="side">
+    <div class="sblock">
+      <h3>Certifications</h3>
+      <div class="cgroup">
+        <h4>Microsoft Certified</h4>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Power Automate RPA Developer Associate</span></div>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>AI Business Professional</span></div>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Power Platform Fundamentals</span></div>
+      </div>
+      <div class="cgroup">
+        <h4>Microsoft Applied Skills</h4>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Create and manage automated processes by using Power Automate</span></div>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Streamline business workflows with AI chat</span></div>
+      </div>
+      <div class="cgroup">
+        <h4>Microsoft Power Up Program</h4>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Autonomous Agents Explorer</span></div>
+        <div class="cert"><svg class="ico"><use href="#i-badge"/></svg><span>Plan Designer Fundamentals</span></div>
+      </div>
+    </div>
+
+    <div class="sblock">
+      <h3>Education</h3>
+      <div class="sitem">
+        <div class="yr">2018 – 2021</div>
+        <b>Master’s Degree in Economics</b>
+        <span>Economic and Financial Analysis</span>
+        <span class="meta">Kraków University of Economics</span>
+      </div>
+      <div class="sitem">
+        <div class="yr">2015 – 2018</div>
+        <b>Bachelor’s Degree in Economics</b>
+        <span>Managerial Economics</span>
+        <span class="meta">Kraków University of Economics</span>
+      </div>
+    </div>
+
+    <div class="sblock">
+      <h3>Earlier Roles</h3>
+      <div class="sitem"><b>Receptionist</b><span class="meta">Mosquito Hostel · Dec 2018 – Jul 2019</span></div>
+      <div class="sitem"><b>Sales Assistant</b><span class="meta">Corleone · Nov 2016 – Oct 2018</span></div>
+      <div class="sitem"><b>Food Service Co-Worker</b><span class="meta">IKEA · Jun 2015 – Oct 2018</span></div>
+      <div class="sitem"><b>Summer Intern</b><span class="meta">Przedsiębiorstwo Pomocnicze MPWiK · Sep – Oct 2017</span></div>
+      <div class="sitem"><b>Call Center Agent</b><span class="meta">Universal Agent · Jun – Oct 2013</span></div>
+    </div>
+
+    <div class="sblock">
+      <h3>Soft Skills</h3>
+      <div class="chips"><span>Problem solving</span><span>Attention to detail</span><span>Communication</span><span>Teamwork</span><span>Time management</span><span>Flexibility</span></div>
+    </div>
+
+    <div class="sblock">
+      <h3>Interests</h3>
+      <div class="sitem"><b>Weightlifting</b></div>
+      <div class="sitem"><b>Marketing</b><span class="meta">B2C strategies and how they shape consumer decisions</span></div>
+      <div class="sitem"><b>Public policy</b><span class="meta">Populism and the economic impact of government action</span></div>
+    </div>
+
+    <div class="qr push">
+      <div class="code" id="qr"><!-- QR code for https://www.linkedin.com/in/grzegorzczekaj --><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 116" preserveAspectRatio="xMinYMin meet"><rect width="100%" height="100%" fill="white" cx="0" cy="0"></rect><path d="M0,0l4,0 0,4 -4,0 0,-4z M4,0l4,0 0,4 -4,0 0,-4z M8,0l4,0 0,4 -4,0 0,-4z M12,0l4,0 0,4 -4,0 0,-4z M16,0l4,0 0,4 -4,0 0,-4z M20,0l4,0 0,4 -4,0 0,-4z M24,0l4,0 0,4 -4,0 0,-4z M32,0l4,0 0,4 -4,0 0,-4z M64,0l4,0 0,4 -4,0 0,-4z M68,0l4,0 0,4 -4,0 0,-4z M72,0l4,0 0,4 -4,0 0,-4z M76,0l4,0 0,4 -4,0 0,-4z M80,0l4,0 0,4 -4,0 0,-4z M88,0l4,0 0,4 -4,0 0,-4z M92,0l4,0 0,4 -4,0 0,-4z M96,0l4,0 0,4 -4,0 0,-4z M100,0l4,0 0,4 -4,0 0,-4z M104,0l4,0 0,4 -4,0 0,-4z M108,0l4,0 0,4 -4,0 0,-4z M112,0l4,0 0,4 -4,0 0,-4z M0,4l4,0 0,4 -4,0 0,-4z M24,4l4,0 0,4 -4,0 0,-4z M32,4l4,0 0,4 -4,0 0,-4z M36,4l4,0 0,4 -4,0 0,-4z M44,4l4,0 0,4 -4,0 0,-4z M52,4l4,0 0,4 -4,0 0,-4z M56,4l4,0 0,4 -4,0 0,-4z M72,4l4,0 0,4 -4,0 0,-4z M88,4l4,0 0,4 -4,0 0,-4z M112,4l4,0 0,4 -4,0 0,-4z M0,8l4,0 0,4 -4,0 0,-4z M8,8l4,0 0,4 -4,0 0,-4z M12,8l4,0 0,4 -4,0 0,-4z M16,8l4,0 0,4 -4,0 0,-4z M24,8l4,0 0,4 -4,0 0,-4z M36,8l4,0 0,4 -4,0 0,-4z M52,8l4,0 0,4 -4,0 0,-4z M56,8l4,0 0,4 -4,0 0,-4z M60,8l4,0 0,4 -4,0 0,-4z M64,8l4,0 0,4 -4,0 0,-4z M72,8l4,0 0,4 -4,0 0,-4z M88,8l4,0 0,4 -4,0 0,-4z M96,8l4,0 0,4 -4,0 0,-4z M100,8l4,0 0,4 -4,0 0,-4z M104,8l4,0 0,4 -4,0 0,-4z M112,8l4,0 0,4 -4,0 0,-4z M0,12l4,0 0,4 -4,0 0,-4z M8,12l4,0 0,4 -4,0 0,-4z M12,12l4,0 0,4 -4,0 0,-4z M16,12l4,0 0,4 -4,0 0,-4z M24,12l4,0 0,4 -4,0 0,-4z M32,12l4,0 0,4 -4,0 0,-4z M36,12l4,0 0,4 -4,0 0,-4z M44,12l4,0 0,4 -4,0 0,-4z M48,12l4,0 0,4 -4,0 0,-4z M52,12l4,0 0,4 -4,0 0,-4z M56,12l4,0 0,4 -4,0 0,-4z M64,12l4,0 0,4 -4,0 0,-4z M68,12l4,0 0,4 -4,0 0,-4z M88,12l4,0 0,4 -4,0 0,-4z M96,12l4,0 0,4 -4,0 0,-4z M100,12l4,0 0,4 -4,0 0,-4z M104,12l4,0 0,4 -4,0 0,-4z M112,12l4,0 0,4 -4,0 0,-4z M0,16l4,0 0,4 -4,0 0,-4z M8,16l4,0 0,4 -4,0 0,-4z M12,16l4,0 0,4 -4,0 0,-4z M16,16l4,0 0,4 -4,0 0,-4z M24,16l4,0 0,4 -4,0 0,-4z M36,16l4,0 0,4 -4,0 0,-4z M52,16l4,0 0,4 -4,0 0,-4z M60,16l4,0 0,4 -4,0 0,-4z M64,16l4,0 0,4 -4,0 0,-4z M76,16l4,0 0,4 -4,0 0,-4z M88,16l4,0 0,4 -4,0 0,-4z M96,16l4,0 0,4 -4,0 0,-4z M100,16l4,0 0,4 -4,0 0,-4z M104,16l4,0 0,4 -4,0 0,-4z M112,16l4,0 0,4 -4,0 0,-4z M0,20l4,0 0,4 -4,0 0,-4z M24,20l4,0 0,4 -4,0 0,-4z M36,20l4,0 0,4 -4,0 0,-4z M64,20l4,0 0,4 -4,0 0,-4z M72,20l4,0 0,4 -4,0 0,-4z M76,20l4,0 0,4 -4,0 0,-4z M88,20l4,0 0,4 -4,0 0,-4z M112,20l4,0 0,4 -4,0 0,-4z M0,24l4,0 0,4 -4,0 0,-4z M4,24l4,0 0,4 -4,0 0,-4z M8,24l4,0 0,4 -4,0 0,-4z M12,24l4,0 0,4 -4,0 0,-4z M16,24l4,0 0,4 -4,0 0,-4z M20,24l4,0 0,4 -4,0 0,-4z M24,24l4,0 0,4 -4,0 0,-4z M32,24l4,0 0,4 -4,0 0,-4z M40,24l4,0 0,4 -4,0 0,-4z M48,24l4,0 0,4 -4,0 0,-4z M56,24l4,0 0,4 -4,0 0,-4z M64,24l4,0 0,4 -4,0 0,-4z M72,24l4,0 0,4 -4,0 0,-4z M80,24l4,0 0,4 -4,0 0,-4z M88,24l4,0 0,4 -4,0 0,-4z M92,24l4,0 0,4 -4,0 0,-4z M96,24l4,0 0,4 -4,0 0,-4z M100,24l4,0 0,4 -4,0 0,-4z M104,24l4,0 0,4 -4,0 0,-4z M108,24l4,0 0,4 -4,0 0,-4z M112,24l4,0 0,4 -4,0 0,-4z M32,28l4,0 0,4 -4,0 0,-4z M36,28l4,0 0,4 -4,0 0,-4z M48,28l4,0 0,4 -4,0 0,-4z M56,28l4,0 0,4 -4,0 0,-4z M60,28l4,0 0,4 -4,0 0,-4z M68,28l4,0 0,4 -4,0 0,-4z M72,28l4,0 0,4 -4,0 0,-4z M76,28l4,0 0,4 -4,0 0,-4z M0,32l4,0 0,4 -4,0 0,-4z M8,32l4,0 0,4 -4,0 0,-4z M12,32l4,0 0,4 -4,0 0,-4z M20,32l4,0 0,4 -4,0 0,-4z M24,32l4,0 0,4 -4,0 0,-4z M28,32l4,0 0,4 -4,0 0,-4z M36,32l4,0 0,4 -4,0 0,-4z M44,32l4,0 0,4 -4,0 0,-4z M56,32l4,0 0,4 -4,0 0,-4z M68,32l4,0 0,4 -4,0 0,-4z M88,32l4,0 0,4 -4,0 0,-4z M100,32l4,0 0,4 -4,0 0,-4z M108,32l4,0 0,4 -4,0 0,-4z M112,32l4,0 0,4 -4,0 0,-4z M12,36l4,0 0,4 -4,0 0,-4z M20,36l4,0 0,4 -4,0 0,-4z M28,36l4,0 0,4 -4,0 0,-4z M32,36l4,0 0,4 -4,0 0,-4z M36,36l4,0 0,4 -4,0 0,-4z M40,36l4,0 0,4 -4,0 0,-4z M48,36l4,0 0,4 -4,0 0,-4z M64,36l4,0 0,4 -4,0 0,-4z M68,36l4,0 0,4 -4,0 0,-4z M72,36l4,0 0,4 -4,0 0,-4z M76,36l4,0 0,4 -4,0 0,-4z M84,36l4,0 0,4 -4,0 0,-4z M88,36l4,0 0,4 -4,0 0,-4z M92,36l4,0 0,4 -4,0 0,-4z M96,36l4,0 0,4 -4,0 0,-4z M112,36l4,0 0,4 -4,0 0,-4z M20,40l4,0 0,4 -4,0 0,-4z M24,40l4,0 0,4 -4,0 0,-4z M40,40l4,0 0,4 -4,0 0,-4z M48,40l4,0 0,4 -4,0 0,-4z M64,40l4,0 0,4 -4,0 0,-4z M72,40l4,0 0,4 -4,0 0,-4z M80,40l4,0 0,4 -4,0 0,-4z M84,40l4,0 0,4 -4,0 0,-4z M88,40l4,0 0,4 -4,0 0,-4z M92,40l4,0 0,4 -4,0 0,-4z M96,40l4,0 0,4 -4,0 0,-4z M104,40l4,0 0,4 -4,0 0,-4z M108,40l4,0 0,4 -4,0 0,-4z M4,44l4,0 0,4 -4,0 0,-4z M16,44l4,0 0,4 -4,0 0,-4z M20,44l4,0 0,4 -4,0 0,-4z M32,44l4,0 0,4 -4,0 0,-4z M48,44l4,0 0,4 -4,0 0,-4z M52,44l4,0 0,4 -4,0 0,-4z M56,44l4,0 0,4 -4,0 0,-4z M60,44l4,0 0,4 -4,0 0,-4z M72,44l4,0 0,4 -4,0 0,-4z M80,44l4,0 0,4 -4,0 0,-4z M88,44l4,0 0,4 -4,0 0,-4z M92,44l4,0 0,4 -4,0 0,-4z M96,44l4,0 0,4 -4,0 0,-4z M112,44l4,0 0,4 -4,0 0,-4z M12,48l4,0 0,4 -4,0 0,-4z M16,48l4,0 0,4 -4,0 0,-4z M24,48l4,0 0,4 -4,0 0,-4z M36,48l4,0 0,4 -4,0 0,-4z M48,48l4,0 0,4 -4,0 0,-4z M52,48l4,0 0,4 -4,0 0,-4z M56,48l4,0 0,4 -4,0 0,-4z M68,48l4,0 0,4 -4,0 0,-4z M76,48l4,0 0,4 -4,0 0,-4z M100,48l4,0 0,4 -4,0 0,-4z M104,48l4,0 0,4 -4,0 0,-4z M4,52l4,0 0,4 -4,0 0,-4z M8,52l4,0 0,4 -4,0 0,-4z M12,52l4,0 0,4 -4,0 0,-4z M32,52l4,0 0,4 -4,0 0,-4z M44,52l4,0 0,4 -4,0 0,-4z M48,52l4,0 0,4 -4,0 0,-4z M52,52l4,0 0,4 -4,0 0,-4z M56,52l4,0 0,4 -4,0 0,-4z M60,52l4,0 0,4 -4,0 0,-4z M64,52l4,0 0,4 -4,0 0,-4z M76,52l4,0 0,4 -4,0 0,-4z M88,52l4,0 0,4 -4,0 0,-4z M92,52l4,0 0,4 -4,0 0,-4z M104,52l4,0 0,4 -4,0 0,-4z M108,52l4,0 0,4 -4,0 0,-4z M112,52l4,0 0,4 -4,0 0,-4z M0,56l4,0 0,4 -4,0 0,-4z M8,56l4,0 0,4 -4,0 0,-4z M20,56l4,0 0,4 -4,0 0,-4z M24,56l4,0 0,4 -4,0 0,-4z M32,56l4,0 0,4 -4,0 0,-4z M36,56l4,0 0,4 -4,0 0,-4z M76,56l4,0 0,4 -4,0 0,-4z M80,56l4,0 0,4 -4,0 0,-4z M92,56l4,0 0,4 -4,0 0,-4z M96,56l4,0 0,4 -4,0 0,-4z M104,56l4,0 0,4 -4,0 0,-4z M108,56l4,0 0,4 -4,0 0,-4z M112,56l4,0 0,4 -4,0 0,-4z M4,60l4,0 0,4 -4,0 0,-4z M20,60l4,0 0,4 -4,0 0,-4z M28,60l4,0 0,4 -4,0 0,-4z M56,60l4,0 0,4 -4,0 0,-4z M64,60l4,0 0,4 -4,0 0,-4z M92,60l4,0 0,4 -4,0 0,-4z M96,60l4,0 0,4 -4,0 0,-4z M108,60l4,0 0,4 -4,0 0,-4z M0,64l4,0 0,4 -4,0 0,-4z M4,64l4,0 0,4 -4,0 0,-4z M16,64l4,0 0,4 -4,0 0,-4z M20,64l4,0 0,4 -4,0 0,-4z M24,64l4,0 0,4 -4,0 0,-4z M40,64l4,0 0,4 -4,0 0,-4z M44,64l4,0 0,4 -4,0 0,-4z M48,64l4,0 0,4 -4,0 0,-4z M52,64l4,0 0,4 -4,0 0,-4z M72,64l4,0 0,4 -4,0 0,-4z M76,64l4,0 0,4 -4,0 0,-4z M80,64l4,0 0,4 -4,0 0,-4z M84,64l4,0 0,4 -4,0 0,-4z M96,64l4,0 0,4 -4,0 0,-4z M100,64l4,0 0,4 -4,0 0,-4z M108,64l4,0 0,4 -4,0 0,-4z M20,68l4,0 0,4 -4,0 0,-4z M40,68l4,0 0,4 -4,0 0,-4z M52,68l4,0 0,4 -4,0 0,-4z M60,68l4,0 0,4 -4,0 0,-4z M68,68l4,0 0,4 -4,0 0,-4z M80,68l4,0 0,4 -4,0 0,-4z M92,68l4,0 0,4 -4,0 0,-4z M100,68l4,0 0,4 -4,0 0,-4z M104,68l4,0 0,4 -4,0 0,-4z M108,68l4,0 0,4 -4,0 0,-4z M0,72l4,0 0,4 -4,0 0,-4z M8,72l4,0 0,4 -4,0 0,-4z M12,72l4,0 0,4 -4,0 0,-4z M24,72l4,0 0,4 -4,0 0,-4z M28,72l4,0 0,4 -4,0 0,-4z M32,72l4,0 0,4 -4,0 0,-4z M36,72l4,0 0,4 -4,0 0,-4z M60,72l4,0 0,4 -4,0 0,-4z M64,72l4,0 0,4 -4,0 0,-4z M68,72l4,0 0,4 -4,0 0,-4z M88,72l4,0 0,4 -4,0 0,-4z M92,72l4,0 0,4 -4,0 0,-4z M104,72l4,0 0,4 -4,0 0,-4z M8,76l4,0 0,4 -4,0 0,-4z M12,76l4,0 0,4 -4,0 0,-4z M16,76l4,0 0,4 -4,0 0,-4z M28,76l4,0 0,4 -4,0 0,-4z M64,76l4,0 0,4 -4,0 0,-4z M68,76l4,0 0,4 -4,0 0,-4z M88,76l4,0 0,4 -4,0 0,-4z M104,76l4,0 0,4 -4,0 0,-4z M4,80l4,0 0,4 -4,0 0,-4z M8,80l4,0 0,4 -4,0 0,-4z M12,80l4,0 0,4 -4,0 0,-4z M16,80l4,0 0,4 -4,0 0,-4z M20,80l4,0 0,4 -4,0 0,-4z M24,80l4,0 0,4 -4,0 0,-4z M28,80l4,0 0,4 -4,0 0,-4z M36,80l4,0 0,4 -4,0 0,-4z M44,80l4,0 0,4 -4,0 0,-4z M56,80l4,0 0,4 -4,0 0,-4z M64,80l4,0 0,4 -4,0 0,-4z M68,80l4,0 0,4 -4,0 0,-4z M76,80l4,0 0,4 -4,0 0,-4z M80,80l4,0 0,4 -4,0 0,-4z M84,80l4,0 0,4 -4,0 0,-4z M88,80l4,0 0,4 -4,0 0,-4z M92,80l4,0 0,4 -4,0 0,-4z M96,80l4,0 0,4 -4,0 0,-4z M100,80l4,0 0,4 -4,0 0,-4z M104,80l4,0 0,4 -4,0 0,-4z M32,84l4,0 0,4 -4,0 0,-4z M36,84l4,0 0,4 -4,0 0,-4z M44,84l4,0 0,4 -4,0 0,-4z M48,84l4,0 0,4 -4,0 0,-4z M52,84l4,0 0,4 -4,0 0,-4z M64,84l4,0 0,4 -4,0 0,-4z M68,84l4,0 0,4 -4,0 0,-4z M72,84l4,0 0,4 -4,0 0,-4z M80,84l4,0 0,4 -4,0 0,-4z M96,84l4,0 0,4 -4,0 0,-4z M100,84l4,0 0,4 -4,0 0,-4z M104,84l4,0 0,4 -4,0 0,-4z M108,84l4,0 0,4 -4,0 0,-4z M112,84l4,0 0,4 -4,0 0,-4z M0,88l4,0 0,4 -4,0 0,-4z M4,88l4,0 0,4 -4,0 0,-4z M8,88l4,0 0,4 -4,0 0,-4z M12,88l4,0 0,4 -4,0 0,-4z M16,88l4,0 0,4 -4,0 0,-4z M20,88l4,0 0,4 -4,0 0,-4z M24,88l4,0 0,4 -4,0 0,-4z M32,88l4,0 0,4 -4,0 0,-4z M36,88l4,0 0,4 -4,0 0,-4z M40,88l4,0 0,4 -4,0 0,-4z M48,88l4,0 0,4 -4,0 0,-4z M52,88l4,0 0,4 -4,0 0,-4z M56,88l4,0 0,4 -4,0 0,-4z M72,88l4,0 0,4 -4,0 0,-4z M76,88l4,0 0,4 -4,0 0,-4z M80,88l4,0 0,4 -4,0 0,-4z M88,88l4,0 0,4 -4,0 0,-4z M96,88l4,0 0,4 -4,0 0,-4z M100,88l4,0 0,4 -4,0 0,-4z M108,88l4,0 0,4 -4,0 0,-4z M0,92l4,0 0,4 -4,0 0,-4z M24,92l4,0 0,4 -4,0 0,-4z M32,92l4,0 0,4 -4,0 0,-4z M36,92l4,0 0,4 -4,0 0,-4z M52,92l4,0 0,4 -4,0 0,-4z M60,92l4,0 0,4 -4,0 0,-4z M64,92l4,0 0,4 -4,0 0,-4z M72,92l4,0 0,4 -4,0 0,-4z M80,92l4,0 0,4 -4,0 0,-4z M96,92l4,0 0,4 -4,0 0,-4z M100,92l4,0 0,4 -4,0 0,-4z M0,96l4,0 0,4 -4,0 0,-4z M8,96l4,0 0,4 -4,0 0,-4z M12,96l4,0 0,4 -4,0 0,-4z M16,96l4,0 0,4 -4,0 0,-4z M24,96l4,0 0,4 -4,0 0,-4z M48,96l4,0 0,4 -4,0 0,-4z M64,96l4,0 0,4 -4,0 0,-4z M68,96l4,0 0,4 -4,0 0,-4z M80,96l4,0 0,4 -4,0 0,-4z M84,96l4,0 0,4 -4,0 0,-4z M88,96l4,0 0,4 -4,0 0,-4z M92,96l4,0 0,4 -4,0 0,-4z M96,96l4,0 0,4 -4,0 0,-4z M104,96l4,0 0,4 -4,0 0,-4z M108,96l4,0 0,4 -4,0 0,-4z M112,96l4,0 0,4 -4,0 0,-4z M0,100l4,0 0,4 -4,0 0,-4z M8,100l4,0 0,4 -4,0 0,-4z M12,100l4,0 0,4 -4,0 0,-4z M16,100l4,0 0,4 -4,0 0,-4z M24,100l4,0 0,4 -4,0 0,-4z M32,100l4,0 0,4 -4,0 0,-4z M40,100l4,0 0,4 -4,0 0,-4z M44,100l4,0 0,4 -4,0 0,-4z M48,100l4,0 0,4 -4,0 0,-4z M52,100l4,0 0,4 -4,0 0,-4z M56,100l4,0 0,4 -4,0 0,-4z M60,100l4,0 0,4 -4,0 0,-4z M64,100l4,0 0,4 -4,0 0,-4z M68,100l4,0 0,4 -4,0 0,-4z M76,100l4,0 0,4 -4,0 0,-4z M80,100l4,0 0,4 -4,0 0,-4z M84,100l4,0 0,4 -4,0 0,-4z M96,100l4,0 0,4 -4,0 0,-4z M100,100l4,0 0,4 -4,0 0,-4z M112,100l4,0 0,4 -4,0 0,-4z M0,104l4,0 0,4 -4,0 0,-4z M8,104l4,0 0,4 -4,0 0,-4z M12,104l4,0 0,4 -4,0 0,-4z M16,104l4,0 0,4 -4,0 0,-4z M24,104l4,0 0,4 -4,0 0,-4z M32,104l4,0 0,4 -4,0 0,-4z M36,104l4,0 0,4 -4,0 0,-4z M48,104l4,0 0,4 -4,0 0,-4z M52,104l4,0 0,4 -4,0 0,-4z M64,104l4,0 0,4 -4,0 0,-4z M68,104l4,0 0,4 -4,0 0,-4z M72,104l4,0 0,4 -4,0 0,-4z M92,104l4,0 0,4 -4,0 0,-4z M104,104l4,0 0,4 -4,0 0,-4z M112,104l4,0 0,4 -4,0 0,-4z M0,108l4,0 0,4 -4,0 0,-4z M24,108l4,0 0,4 -4,0 0,-4z M44,108l4,0 0,4 -4,0 0,-4z M80,108l4,0 0,4 -4,0 0,-4z M84,108l4,0 0,4 -4,0 0,-4z M88,108l4,0 0,4 -4,0 0,-4z M92,108l4,0 0,4 -4,0 0,-4z M100,108l4,0 0,4 -4,0 0,-4z M108,108l4,0 0,4 -4,0 0,-4z M0,112l4,0 0,4 -4,0 0,-4z M4,112l4,0 0,4 -4,0 0,-4z M8,112l4,0 0,4 -4,0 0,-4z M12,112l4,0 0,4 -4,0 0,-4z M16,112l4,0 0,4 -4,0 0,-4z M20,112l4,0 0,4 -4,0 0,-4z M24,112l4,0 0,4 -4,0 0,-4z M32,112l4,0 0,4 -4,0 0,-4z M36,112l4,0 0,4 -4,0 0,-4z M48,112l4,0 0,4 -4,0 0,-4z M52,112l4,0 0,4 -4,0 0,-4z M64,112l4,0 0,4 -4,0 0,-4z M72,112l4,0 0,4 -4,0 0,-4z M76,112l4,0 0,4 -4,0 0,-4z M80,112l4,0 0,4 -4,0 0,-4z M84,112l4,0 0,4 -4,0 0,-4z M88,112l4,0 0,4 -4,0 0,-4z M100,112l4,0 0,4 -4,0 0,-4z M108,112l4,0 0,4 -4,0 0,-4z " stroke="transparent" fill="#0F1D35"></path></svg></div>
+      <div class="txt"><b>Scan for LinkedIn</b>linkedin.com/in/<br>grzegorzczekaj</div>
+    </div>
+  </aside>
+</section>
+</body>
+</html>
