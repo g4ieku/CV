@@ -1,429 +1,712 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grzegorz Czekaj – Power Platform Developer</title>
     <meta
       name="description"
-      content="Grzegorz Czekaj – Power Platform Developer from Cracow. CV / Resume."
+      content="Grzegorz Czekaj – Power Platform Developer from Kraków. Power Apps, Power Automate, Dataverse, Dynamics 365 and Copilot Studio."
     />
-    <title>Grzegorz Czekaj – CV</title>
+    <meta name="author" content="Grzegorz Czekaj" />
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:title"
+      content="Grzegorz Czekaj – Power Platform Developer"
+    />
+    <meta
+      property="og:description"
+      content="Automation and business applications on Microsoft Power Platform and Dynamics 365."
+    />
+    <meta property="og:image" content="https://g4ieku.github.io/CV/photo.jpg" />
+    <meta property="og:url" content="https://g4ieku.github.io/CV/" />
+    <meta name="theme-color" content="#0F1D35" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EGC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="cv">
-      <!-- ================= SIDEBAR ================= -->
-      <aside class="sidebar">
-        <img class="photo" src="me.jpeg" alt="Grzegorz Czekaj" />
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+          <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+          <path
+            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+          />
+          <rect width="4" height="12" x="2" y="9" />
+          <circle cx="4" cy="4" r="2" />
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24">
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          />
+          <path d="M9 18c-4.51 2-5-2-7-2" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </symbol>
+        <symbol id="i-download" viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <path d="m7 10 5 5 5-5" />
+          <path d="M12 15V3" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24">
+          <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          <rect width="20" height="14" x="2" y="6" rx="2" />
+        </symbol>
+        <symbol id="i-landmark" viewBox="0 0 24 24">
+          <line x1="3" x2="21" y1="22" y2="22" />
+          <line x1="6" x2="6" y1="18" y2="11" />
+          <line x1="10" x2="10" y1="18" y2="11" />
+          <line x1="14" x2="14" y1="18" y2="11" />
+          <line x1="18" x2="18" y1="18" y2="11" />
+          <polygon points="12 2 20 7 4 7" />
+        </symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24">
+          <path
+            d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+          />
+          <path d="M22 10v6" />
+          <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </symbol>
+        <symbol id="i-badge" viewBox="0 0 24 24">
+          <path
+            d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+          />
+          <path d="m9 12 2 2 4-4" />
+        </symbol>
+        <symbol id="i-history" viewBox="0 0 24 24">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+          <path d="M12 7v5l4 2" />
+        </symbol>
+      </defs>
+    </svg>
 
-        <section class="side-section">
-          <h2>Contact</h2>
-          <dl class="contact">
-            <dt>Phone</dt>
-            <dd><a href="tel:+48888129384">888-129-384</a></dd>
-            <dt>Email</dt>
-            <dd>
-              <a href="mailto:czekajgieku@gmail.com">czekajgieku@gmail.com</a>
-            </dd>
-            <dt>Location</dt>
-            <dd>Cracow, Poland</dd>
-          </dl>
-          <p class="links">
-            <a
-              href="https://www.linkedin.com/in/grzegorzczekaj/"
-              target="_blank"
-              rel="noopener"
-              >Linkedin</a
-            >
-            <a href="https://github.com/g4ieku" target="_blank" rel="noopener"
-              >Github</a
-            >
-          </p>
-        </section>
-
-        <section class="side-section">
-          <h2>Education</h2>
-          <div class="edu">
-            <span class="year">2018 – 2021</span>
-            <strong>Economic and financial analysis</strong>
-            <span>University of Economics, Cracow</span>
+    <div class="layout">
+      <!-- ===================== Sidebar ===================== -->
+      <aside class="side">
+        <div class="side-top">
+          <div class="photo">
+            <img src="me.jpeg" alt="Grzegorz Czekaj" width="387" height="387" />
           </div>
-          <div class="edu">
-            <span class="year">2015 – 2018</span>
-            <strong>Managerial economics</strong>
-            <span>University of Economics, Cracow</span>
-          </div>
-        </section>
 
-        <section class="side-section">
-          <h2>Tech Stack</h2>
-          <ul class="dots">
-            <li>Power Apps</li>
-            <li>Power Automate</li>
-            <li>Power Automate Desktop</li>
-            <li>Microsoft Copilot Studio</li>
-            <li>Dynamics 365 Customer Service</li>
-            <li>Dataverse</li>
-            <li>Power BI</li>
-            <li>SharePoint</li>
-            <li>C#</li>
-            <li>VBA</li>
-            <li>UiPath</li>
-            <li>Excel</li>
-            <li>JavaScript ES6</li>
-            <li>HTML5, CSS3 (SCSS), Bootstrap</li>
-            <li>Python</li>
-            <li>PostgreSQL</li>
-            <li>Git, GitHub</li>
-            <li>Jira</li>
-            <li>CapCut</li>
-          </ul>
-        </section>
+          <section class="sblock">
+            <h2>Contact</h2>
+            <ul class="contact">
+              <li>
+                <span class="ic"
+                  ><svg class="ico"><use href="#i-phone" /></svg></span
+                ><a href="tel:+48888129384">+48 888 129 384</a>
+              </li>
+              <li>
+                <span class="ic"
+                  ><svg class="ico"><use href="#i-mail" /></svg></span
+                ><a href="mailto:czekajgieku@gmail.com"
+                  >czekajgieku@gmail.com</a
+                >
+              </li>
+              <li>
+                <span class="ic"
+                  ><svg class="ico"><use href="#i-pin" /></svg></span
+                ><span>Kraków, Poland</span>
+              </li>
+              <li>
+                <span class="ic"
+                  ><svg class="ico"><use href="#i-linkedin" /></svg></span
+                ><a
+                  href="https://www.linkedin.com/in/grzegorzczekaj"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/grzegorzczekaj</a
+                >
+              </li>
+              <li>
+                <span class="ic"
+                  ><svg class="ico"><use href="#i-github" /></svg></span
+                ><a
+                  href="https://github.com/g4ieku"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/g4ieku</a
+                >
+              </li>
+            </ul>
+            <a class="btn" href="CV-Grzegorz-Czekaj.pdf" download
+              ><svg class="ico"><use href="#i-download" /></svg>Download CV
+              (PDF)</a
+            >
+          </section>
+        </div>
 
-        <section class="side-section">
-          <h2>Certifications</h2>
-          <ul class="dots">
-            <li>Microsoft Certified: AI Business Professional</li>
-            <li>Applied Skills: Streamline business workflows with AI chat</li>
-            <li>
-              Applied Skills: Create and manage automated processes by using
-              Power Automate
-            </li>
-            <li>Power Up Program: Autonomous Agents Explorer</li>
-            <li>Power Up Program: Plan Designer Fundamentals</li>
-          </ul>
-        </section>
+        <div class="side-rest">
+          <section class="sblock">
+            <h2>Skills</h2>
+            <h3>Power Platform</h3>
+            <div class="chips">
+              <span class="hi">Power Apps</span
+              ><span class="hi">Power Automate</span
+              ><span class="hi">Dataverse</span><span>Power BI</span
+              ><span class="hi">Copilot Studio</span>
+            </div>
+            <h3>Dynamics 365 &amp; Microsoft 365</h3>
+            <div class="chips">
+              <span class="hi">D365 Customer Service</span
+              ><span>D365 Customer Engagement</span><span>SharePoint</span
+              ><span>Excel</span>
+            </div>
+            <h3>RPA &amp; scripting</h3>
+            <div class="chips">
+              <span>Power Automate Desktop</span><span>UiPath</span
+              ><span>VBA</span><span>Python</span>
+            </div>
+            <h3>Development</h3>
+            <div class="chips">
+              <span>C#</span><span>JavaScript (ES6)</span><span>HTML5</span
+              ><span>CSS3 (SCSS)</span><span>Bootstrap</span
+              ><span>PostgreSQL</span>
+            </div>
+            <h3>Tools</h3>
+            <div class="chips">
+              <span>Git &amp; GitHub</span><span>Jira</span><span>CapCut</span>
+            </div>
+          </section>
 
-        <section class="side-section">
-          <h2>Soft Skills</h2>
-          <ul class="dots">
-            <li>Teamwork</li>
-            <li>Problem solving</li>
-            <li>Time management</li>
-            <li>Flexibility</li>
-            <li>Communication</li>
-            <li>Attention to detail</li>
-          </ul>
-        </section>
+          <section class="sblock">
+            <h2>Languages</h2>
+            <div class="lang">
+              <div class="row"><b>Polish</b><span>Native</span></div>
+              <div class="scale" role="img" aria-label="Native">
+                <i class="on"></i><i class="on"></i><i class="on"></i
+                ><i class="on"></i><i class="on"></i><i class="on"></i>
+              </div>
+            </div>
+            <div class="lang">
+              <div class="row">
+                <b>English</b><span>B2 · Upper-intermediate</span>
+              </div>
+              <div class="scale" role="img" aria-label="B2">
+                <i class="on"></i><i class="on"></i><i class="on"></i
+                ><i class="on"></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="lang">
+              <div class="row"><b>French</b><span>A2 · Elementary</span></div>
+              <div class="scale" role="img" aria-label="A2">
+                <i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="cefr" aria-hidden="true">
+                <span>A1</span><span>A2</span><span>B1</span><span>B2</span
+                ><span>C1</span><span>C2</span>
+              </div>
+            </div>
+          </section>
 
-        <section class="side-section">
-          <h2>Language</h2>
-          <ul class="langs">
-            <li>Polish – native</li>
-            <li>English – B2</li>
-            <li>French – A2</li>
-          </ul>
-        </section>
+          <section class="sblock">
+            <h2>Soft Skills</h2>
+            <div class="chips">
+              <span>Problem solving</span><span>Attention to detail</span
+              ><span>Communication</span><span>Teamwork</span
+              ><span>Time management</span><span>Flexibility</span>
+            </div>
+          </section>
 
-        <section class="side-section">
-          <h2>Hobbies</h2>
-          <ul class="dots">
-            <li>Weightlifting</li>
-            <li>
-              Marketing (business-to-consumer marketing, marketing strategies
-              and their influence on consumer decisions)
-            </li>
-            <li>
-              Public Policy (populism, impact of government actions on the
-              economy)
-            </li>
-          </ul>
-        </section>
+          <section class="sblock">
+            <h2>Interests</h2>
+            <div class="sitem"><b>Weightlifting</b></div>
+            <div class="sitem">
+              <b>Marketing</b
+              ><span>B2C strategies and how they shape consumer decisions</span>
+            </div>
+            <div class="sitem">
+              <b>Public policy</b
+              ><span
+                >Populism and the economic impact of government action</span
+              >
+            </div>
+          </section>
+        </div>
       </aside>
 
-      <!-- ================= MAIN ================= -->
-      <div class="main">
-        <header class="header">
-          <h1>
-            <span class="first">Grzegorz</span> <span class="last">Czekaj</span>
-          </h1>
-          <p class="role-title">Power Platform Developer</p>
-          <p class="summary">
-            I am a dedicated and detail-oriented Power Platform Specialist with
-            a strong background in automation. I bring a robust background in
-            designing, developing, and implementing solutions using Microsoft
-            Power Platform. I especially like doing creative tasks and
-            implementing completely new solutions. I aim to stay at the
-            forefront of technology trends, continuously improving my skills and
-            contributing to impactful projects that drive organizational
-            success.
+      <!-- ===================== Main ===================== -->
+      <main class="main">
+        <header class="hero">
+          <h1>Grzegorz <span class="ln">Czekaj</span></h1>
+          <p class="headline">Power Platform Developer</p>
+          <p class="focus">
+            Power Apps · Power Automate · Dataverse · Dynamics 365 · Copilot
+            Studio
           </p>
-          <button class="print-btn" type="button" onclick="window.print()">
-            Download PDF
-          </button>
+          <span class="hero-bar"></span>
         </header>
 
-        <section>
-          <h2 class="main-heading">Experience</h2>
-
-          <ol class="timeline">
-            <li class="entry">
-              <p class="period">Aug 2026 – currently</p>
-              <p class="company">Inter Cars S.A. | Warsaw</p>
-              <h3>Automation Solutions Power Platform Developer</h3>
-            </li>
-
-            <li class="entry">
-              <p class="period">Mar 2026 – currently</p>
-              <p class="company">PIRXON | Gdańsk</p>
-              <h3>Power Automate Desktop Developer</h3>
-              <p class="stack">Power Automate Desktop, Power Automate Flow</p>
-              <ul class="bullets">
-                <li>
-                  Designed, developed, and maintained Robotic Process Automation
-                  (RPA) solutions using Microsoft Power Automate Desktop
-                </li>
-                <li>
-                  Automated repetitive business processes by building reliable
-                  and scalable desktop flows
-                </li>
-                <li>
-                  Integrated Power Automate Desktop solutions with web
-                  applications, desktop applications, files, databases, and
-                  other business systems
-                </li>
-                <li>
-                  Developed and optimized automation workflows using variables,
-                  conditions, loops, UI automation, data manipulation, and error
-                  handling
-                </li>
-                <li>
-                  Investigated and resolved automation issues, improving flow
-                  stability, performance, and maintainability
-                </li>
-                <li>
-                  Collaborated with business and technical teams to analyze
-                  processes, identify automation opportunities, and deliver RPA
-                  solutions
-                </li>
-                <li>
-                  Supported testing, deployment, monitoring, and ongoing
-                  maintenance of production automations
-                </li>
-              </ul>
-            </li>
-
-            <li class="entry">
-              <p class="period">Jan 2021 – currently</p>
-              <p class="company">
-                District Council XVII Wzgórza Krzesławickie | Cracow
-              </p>
-              <h3>District Councilor</h3>
-              <ul class="bullets">
-                <li>
-                  #Vice-Chairman of the Rule of Law and Public Safety Committee
-                  & Vice-Chairman of the Environmental Protection Committee
-                </li>
-                <li>
-                  Provided services aimed at addressing and supporting local
-                  community needs
-                </li>
-                <li>
-                  Represented community members by communicating their concerns
-                  and priorities to relevant bodies
-                </li>
-                <li>
-                  Attended council meetings, public events, and official
-                  activities as a Ward Member
-                </li>
-                <li>
-                  Addressed and resolved issues raised by constituents in a
-                  timely and structured manner
-                </li>
-                <li>
-                  Voted on local legislation, budget allocations, and
-                  development projects impacting the community
-                </li>
-                <li>
-                  Voted on local legislation, budget allocations, and
-                  development projects impacting the community
-                </li>
-                <li>
-                  Provided feedback to local government bodies and stakeholder
-                  groups on council resolutions
-                </li>
-              </ul>
-            </li>
-
-            <li class="entry">
-              <p class="period">Aug 2025 – Sep 2026</p>
-              <p class="company">Heineken | Cracow</p>
-              <h3>Solution Engineer (Dynamics 365)</h3>
-              <p class="stack">
-                Microsoft Power Automate, SharePoint, Dataverse, SQL, Microsoft
-                Power Apps, Microsoft Power Platform, JavaScript, Microsoft
-                Dynamics 365, C#
-              </p>
-              <ul class="bullets">
-                <li>
-                  Designed and customized Dynamics 365 Customer Service
-                  solutions (Dataverse, forms, views, business rules) to support
-                  case management
-                </li>
-                <li>
-                  Built model-driven apps to optimize customer service workflows
-                  and agent experience
-                </li>
-                <li>
-                  Automated case routing, escalations, SLAs, and approvals using
-                  Power Automate
-                </li>
-                <li>
-                  Integrated D365 Customer Service with SharePoint and external
-                  systems/APIs
-                </li>
-                <li>
-                  Collaborated with POs and DevOps teams to deliver stable,
-                  scalable solutions
-                </li>
-                <li>
-                  Supported testing, deployment, and troubleshooting following
-                  ALM best practices
-                </li>
-              </ul>
-            </li>
-
-            <li class="entry">
-              <p class="period">Feb 2022 – Jul 2025</p>
-              <p class="company">Heineken | Cracow</p>
-              <div class="multi-role">
-                <h3>Finance Automation Consultant</h3>
-                <span>Jan 2024 – Jul 2025</span>
-                <h3>Junior Automation Specialist</h3>
-                <span>Feb 2022 – Jan 2024</span>
-              </div>
-              <p class="stack">
-                VBA, Power Automate Desktop, Power Automate, Power Apps, Power
-                BI, SharePoint, Dataverse, JavaScript, HTML, CSS
-              </p>
-              <ul class="bullets">
-                <li>
-                  Designed and developed Canvas and Model-driven Power Apps to
-                  automate business processes and enhance user experience
-                </li>
-                <li>
-                  Created and optimized Power Automate flows to streamline
-                  workflows, reducing manual effort by up to 90%
-                </li>
-                <li>
-                  Developed interactive Power BI reports and dashboards to
-                  provide actionable insights for decision-makers
-                </li>
-                <li>
-                  Integrated Power Platform solutions with SharePoint, Dynamics
-                  365, and external APIs
-                </li>
-                <li>
-                  Implemented security roles and data governance best practices
-                  within Dataverse
-                </li>
-                <li>
-                  Provided training and documentation for end-users and
-                  stakeholders to ensure adoption of solutions
-                </li>
-                <li>
-                  Designed and executed QA tests using scripts to test system
-                  operations automatically
-                </li>
-                <li>
-                  Analyzed existing processes to find areas that can benefit
-                  from automation
-                </li>
-                <li>
-                  Set up databases, applications, and hardware necessary for
-                  automation
-                </li>
-                <li>
-                  Diagnosed and fixed issues with automated systems to ensure
-                  they function correctly
-                </li>
-                <li>
-                  Worked with various departments to understand their needs and
-                  implement automation solutions
-                </li>
-              </ul>
-            </li>
-
-            <li class="entry">
-              <p class="period">Oct 2020 – Feb 2022</p>
-              <p class="company">Heineken | Cracow</p>
-              <div class="multi-role">
-                <h3>VAMR Analyst (France)</h3>
-                <span>Apr 2021 – Feb 2022</span>
-                <h3>Junior VAMR Analyst (France)</h3>
-                <span>Oct 2020 – Apr 2021</span>
-              </div>
-              <p class="stack">
-                Microsoft Excel, Microsoft Power Query, VBA, SAP HANA
-              </p>
-              <ul class="bullets">
-                <li>
-                  Analyzing open items, including blocked items, debit balances,
-                  direct debits, and overdue items
-                </li>
-                <li>Delivering monthly control reports and analyses</li>
-                <li>
-                  Proposing changes to make controls more effective and
-                  efficient
-                </li>
-                <li>
-                  Identifying issues and following the agreed escalation route
-                </li>
-                <li>Supporting internal audit activities</li>
-                <li>Updating and maintaining procedures</li>
-              </ul>
-            </li>
-
-            <li class="entry">
-              <p class="period">Jun 2019 – Oct 2020</p>
-              <p class="company">Heineken | Cracow</p>
-              <h3>Junior PTP Administrator (France)</h3>
-              <p class="stack">
-                Microsoft Excel, Microsoft Power Query, SAP HANA
-              </p>
-              <ul class="bullets">
-                <li>
-                  Processed purchase order (PO) and non-PO invoices in
-                  accordance with company procedures and financial controls
-                </li>
-                <li>
-                  Performed daily accounts payable activities, including invoice
-                  processing and open-item analysis
-                </li>
-                <li>
-                  Continuously identified and supported process improvement
-                  opportunities to enhance operational efficiency
-                </li>
-                <li>
-                  Troubleshot invoice processing errors and resolved operational
-                  issues as required
-                </li>
-                <li>
-                  Managed vendor communications by responding to inquiries via
-                  email in a timely and professional manner
-                </li>
-                <li>
-                  Prepared ad-hoc reports, analyzed financial data, and provided
-                  actionable insights and conclusions
-                </li>
-              </ul>
-            </li>
-          </ol>
+        <section class="sec" id="profile">
+          <h2>
+            <span class="badge-ic"
+              ><svg class="ico"><use href="#i-user" /></svg></span
+            >Profile
+          </h2>
+          <p class="lead">
+            I am a dedicated, detail-oriented
+            <b>Power Platform Developer</b> with 4+ years of experience
+            delivering automation and business applications on
+            <b>Microsoft Power Platform</b> and <b>Dynamics 365</b>. Having
+            grown from finance operations into solution engineering at HEINEKEN,
+            I understand the business processes I automate, not just the
+            technology. I especially enjoy creative work and building completely
+            new solutions, and I am now expanding into AI-powered automation
+            with <b>Copilot Studio</b>.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <b>4+</b><span>years in automation &amp; Power Platform</span>
+            </div>
+            <div class="stat">
+              <b>7+</b><span>years at HEINEKEN, across 6 roles</span>
+            </div>
+            <div class="stat">
+              <b><small>up to </small>50%</b
+              ><span>less manual effort via Power Automate</span>
+            </div>
+            <div class="stat">
+              <b>7</b><span>Microsoft certifications</span>
+            </div>
+          </div>
         </section>
 
-        <footer class="gdpr">
-          <p>
-            I agree to the processing of personal data provided in this document
-            for realising the recruitment process pursuant to the Personal Data
-            Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and
-            in agreement with Regulation (EU) 2016/679 of the European
-            Parliament and of the Council of 27 April 2016 on the protection of
-            natural persons with regard to the processing of personal data and
-            on the free movement of such data, and repealing Directive 95/46/EC
-            (General Data Protection Regulation).
-          </p>
+        <section class="sec" id="experience">
+          <h2>
+            <span class="badge-ic"
+              ><svg class="ico"><use href="#i-briefcase" /></svg></span
+            >Experience
+          </h2>
+
+          <article class="org">
+            <div class="org-head">
+              <h3>Inter Cars S.A.</h3>
+              <span class="org-loc">Warsaw, Poland</span>
+            </div>
+            <div class="roles">
+              <div class="role now">
+                <div class="role-head">
+                  <h4>Automation Solutions Power Platform Developer</h4>
+                  <span class="date">Aug 2026 – Present</span>
+                </div>
+                <ul>
+                  <li>
+                    Design and implement business solutions on Power Platform
+                    with <b>Power Automate</b> and <b>Power Apps</b> (Canvas and
+                    model-driven)
+                  </li>
+                  <li>Develop and maintain RPA processes in <b>UiPath</b></li>
+                  <li>
+                    Build supporting scripts and integrations in <b>Python</b>
+                  </li>
+                  <li>
+                    Create and maintain process and solution documentation in
+                    Polish and English
+                  </li>
+                  <li>
+                    Standardize and modernize existing solutions, and help the
+                    business analyze and evaluate ideas for new automations
+                  </li>
+                  <li>
+                    Actively contribute to the growth of the internal automation
+                    community
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="org">
+            <div class="org-head">
+              <h3>PIRXON</h3>
+              <span class="org-loc">Gdańsk, Poland</span>
+            </div>
+            <div class="roles">
+              <div class="role now">
+                <div class="role-head">
+                  <h4>
+                    Power Automate Desktop Developer
+                    <span class="pill">Part-time</span>
+                  </h4>
+                  <span class="date">Mar 2026 – Present</span>
+                </div>
+                <ul>
+                  <li>
+                    Design, develop, and maintain RPA solutions in
+                    <b>Power Automate Desktop</b> and
+                    <b>Power Automate</b> cloud flows, automating repetitive
+                    business processes
+                  </li>
+                  <li>
+                    Integrate flows with web and desktop apps, files, and
+                    databases, using variables, loops, UI automation, and error
+                    handling
+                  </li>
+                  <li>
+                    Analyze processes with business and technical teams to
+                    identify automation opportunities and deliver RPA solutions
+                  </li>
+                  <li>
+                    Support testing, deployment, monitoring, and maintenance of
+                    production automations, resolving issues to improve
+                    stability and performance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="org">
+            <div class="org-head">
+              <h3>HEINEKEN Global Shared Services</h3>
+              <span class="org-loc">Kraków, Poland</span>
+            </div>
+            <p class="org-sub"><b>7 yrs 4 mos</b></p>
+            <div class="roles">
+              <div class="role">
+                <div class="role-head">
+                  <h4>Solution Engineer (Dynamics 365)</h4>
+                  <span class="date">Aug 2025 – Sep 2026</span>
+                </div>
+                <ul>
+                  <li>
+                    Designed, configured, and delivered
+                    <b>Dynamics 365 Customer Engagement (CE)</b> solutions
+                    aligned with business and OpCo requirements
+                  </li>
+                  <li>
+                    Customized <b>Dynamics 365 Customer Service</b> for case
+                    management: Dataverse tables, forms, views, and business
+                    rules
+                  </li>
+                  <li>
+                    Built <b>model-driven apps</b> that streamlined customer
+                    service workflows
+                  </li>
+                  <li>
+                    Automated case routing, escalations, SLAs, and approvals in
+                    <b>Power Automate</b>
+                  </li>
+                  <li>
+                    Integrated Dynamics 365 with SharePoint, enterprise systems,
+                    and APIs
+                  </li>
+                  <li>
+                    Collaborated with Product Owners and DevOps on testing,
+                    deployment, troubleshooting, and knowledge transfer,
+                    following <b>ALM</b> best practices
+                  </li>
+                  <li>
+                    Ensured platform stability in line with governance and
+                    security standards
+                  </li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <h4>Finance Automation Consultant</h4>
+                  <span class="date">Jan 2024 – Aug 2025</span>
+                </div>
+                <ul>
+                  <li>
+                    Built and optimized <b>Power Automate</b> flows that cut
+                    manual effort by <b>up to 50%</b>
+                  </li>
+                  <li>
+                    Developed interactive <b>Power BI</b> reports and dashboards
+                    for decision-makers
+                  </li>
+                  <li>
+                    Built <b>Canvas and model-driven Power Apps</b> to automate
+                    business processes
+                  </li>
+                  <li>
+                    Integrated solutions with SharePoint, Dynamics 365, and
+                    external APIs
+                  </li>
+                  <li>
+                    Implemented security roles and data-governance best
+                    practices in <b>Dataverse</b>
+                  </li>
+                  <li>
+                    Trained users and stakeholders and wrote documentation to
+                    drive adoption
+                  </li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <h4>Junior Automation Specialist</h4>
+                  <span class="date">Feb 2022 – Jan 2024</span>
+                </div>
+                <ul>
+                  <li>
+                    Identified automation and optimization opportunities in
+                    business processes
+                  </li>
+                  <li>
+                    Built, implemented, and maintained automated solutions that
+                    improved efficiency and reduced manual effort
+                  </li>
+                  <li>
+                    Designed and executed scripted <b>QA automation tests</b> to
+                    validate system operations and ensure reliability
+                  </li>
+                  <li>
+                    Configured the databases, applications, and infrastructure
+                    automation relies on, and diagnosed and resolved issues to
+                    keep systems stable
+                  </li>
+                  <li>
+                    Partnered with cross-functional teams to gather requirements
+                    and deliver solutions that improved productivity
+                  </li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <h4>VAMR Analyst (France)</h4>
+                  <span class="date">Apr 2021 – Feb 2022</span>
+                </div>
+                <p class="role-note">
+                  Promoted from Junior VAMR Analyst (France), Oct 2020 – Apr
+                  2021
+                </p>
+                <ul>
+                  <li>
+                    Analyzed open items, including blocked items, debit
+                    balances, direct debits, and overdue accounts, to ensure
+                    financial accuracy
+                  </li>
+                  <li>
+                    Delivered monthly control reports and detailed variance
+                    analysis
+                  </li>
+                  <li>
+                    Proposed improvements to control effectiveness and escalated
+                    issues through the agreed governance routes
+                  </li>
+                  <li>
+                    Supported internal audits and kept procedures and
+                    documentation current
+                  </li>
+                </ul>
+              </div>
+              <div class="role">
+                <div class="role-head">
+                  <h4>Junior PTP Administrator (France)</h4>
+                  <span class="date">Jun 2019 – Oct 2020</span>
+                </div>
+                <ul>
+                  <li>
+                    Processed PO and non-PO invoices and performed daily
+                    accounts payable activities in line with financial controls
+                  </li>
+                  <li>
+                    Troubleshot invoice-processing errors, handled vendor
+                    inquiries, and prepared ad-hoc reports and financial
+                    analyses
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="sec" id="public-service">
+          <h2>
+            <span class="badge-ic"
+              ><svg class="ico"><use href="#i-landmark" /></svg></span
+            >Public Service
+          </h2>
+          <article class="org">
+            <div class="org-head">
+              <h3>District Council XVII Wzgórza Krzesławickie</h3>
+              <span class="org-loc">Kraków, Poland</span>
+            </div>
+            <div class="roles">
+              <div class="role now">
+                <div class="role-head">
+                  <h4>District Councilor</h4>
+                  <span class="date">Jan 2021 – Present</span>
+                </div>
+                <div class="tags">
+                  <span class="tag"
+                    ><b>Vice-Chairman</b> · Rule of Law and Public Safety
+                    Committee</span
+                  >
+                  <span class="tag"
+                    ><b>Vice-Chairman</b> · Environmental Protection
+                    Committee</span
+                  >
+                </div>
+                <ul>
+                  <li>
+                    Represent residents and bring their concerns to the relevant
+                    authorities
+                  </li>
+                  <li>
+                    Resolve issues raised by constituents in a timely,
+                    structured manner
+                  </li>
+                  <li>
+                    Vote on local resolutions, budget allocations, and
+                    development projects
+                  </li>
+                  <li>
+                    Attend council sessions and public events, and give feedback
+                    on council resolutions to local government bodies and
+                    stakeholder groups
+                  </li>
+                </ul>
+                <a
+                  class="link"
+                  href="https://www.radnyczekaj.pl/"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="ico"><use href="#i-globe" /></svg
+                  >www.radnyczekaj.pl</a
+                >
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div class="two-col">
+          <section class="sec" id="certifications">
+            <h2>
+              <span class="badge-ic"
+                ><svg class="ico"><use href="#i-badge" /></svg></span
+              >Certifications
+            </h2>
+            <h3 class="group">Microsoft Certified</h3>
+            <ul class="certs">
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Power Automate RPA
+                Developer Associate
+              </li>
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>AI Business
+                Professional
+              </li>
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Power Platform
+                Fundamentals
+              </li>
+            </ul>
+            <h3 class="group">Microsoft Applied Skills</h3>
+            <ul class="certs">
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Create and manage
+                automated processes by using Power Automate
+              </li>
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Streamline
+                business workflows with AI chat
+              </li>
+            </ul>
+            <h3 class="group">Microsoft Power Up Program</h3>
+            <ul class="certs">
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Autonomous Agents
+                Explorer
+              </li>
+              <li>
+                <svg class="ico"><use href="#i-badge" /></svg>Plan Designer
+                Fundamentals
+              </li>
+            </ul>
+          </section>
+
+          <div>
+            <section class="sec" id="education">
+              <h2>
+                <span class="badge-ic"
+                  ><svg class="ico"><use href="#i-cap" /></svg></span
+                >Education
+              </h2>
+              <div class="card">
+                <span class="yr">2018 – 2021</span>
+                <h3>Master’s Degree in Economics</h3>
+                <p>Economic and Financial Analysis</p>
+                <p class="muted">Kraków University of Economics</p>
+              </div>
+              <div class="card">
+                <span class="yr">2015 – 2018</span>
+                <h3>Bachelor’s Degree in Economics</h3>
+                <p>Managerial Economics</p>
+                <p class="muted">Kraków University of Economics</p>
+              </div>
+            </section>
+
+            <section class="sec" id="earlier">
+              <h2>
+                <span class="badge-ic"
+                  ><svg class="ico"><use href="#i-history" /></svg></span
+                >Earlier Roles
+              </h2>
+              <ul class="earlier">
+                <li>
+                  <b>Receptionist</b
+                  ><span>Mosquito Hostel · Dec 2018 – Jul 2019</span>
+                </li>
+                <li>
+                  <b>Sales Assistant</b
+                  ><span>Corleone · Nov 2016 – Oct 2018</span>
+                </li>
+                <li>
+                  <b>Food Service Co-Worker</b
+                  ><span>IKEA · Jun 2015 – Oct 2018</span>
+                </li>
+                <li>
+                  <b>Summer Intern</b
+                  ><span
+                    >Przedsiębiorstwo Pomocnicze MPWiK · Sep – Oct 2017</span
+                  >
+                </li>
+                <li>
+                  <b>Call Center Agent</b
+                  ><span>Universal Agent · Jun – Oct 2013</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <footer class="foot">
+          <span>© 2026 Grzegorz Czekaj</span>
+          <a href="CV-Grzegorz-Czekaj.pdf" download>Download CV (PDF)</a>
         </footer>
-      </div>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
